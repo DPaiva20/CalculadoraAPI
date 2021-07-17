@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora</title>
+<script src="CalculatorClient.js"></script>
+<script src="TextFitter.js"></script>
+<link rel="stylesheet" href="Index.css">
+</head>
+<body>
+<div class="Container">
+	<div class="Header">
+		</br>
+		<div class="Screen">
+			<p id="operation" class="operation"></p>
+			<p id="label" class="label">0</p>
+		</div><!--/Screen-->
+	</div><!--/Header-->
+	<div class="Content">
+		<button class="Keypad_Operators" type="button" onclick="Clear()">CE</button>
+		<button class="Keypad_Operators" type="button" onclick="Clear(true)">C</button>
+		<button class="Keypad_Operators" type="button" onclick="DeleteLastDigit()">&#8592</button>
+		<button class="Keypad_Operators" type="button" value="div" accesskey="/" onclick="AddOperator(this.value)"> &divide </button>
+		<!--Row-->
+		<button class="Keypad_Numbers" type="button" value="7" accesskey="7" onclick="AddNumber(this.value)">7</button>
+		<button class="Keypad_Numbers" type="button" value="8" accesskey="8" onclick="AddNumber(this.value)">8</button>
+		<button class="Keypad_Numbers" type="button" value="9" accesskey="9" onclick="AddNumber(this.value)">9</button>
+		<button class="Keypad_Operators" type="button" value="mul" accesskey="*" onclick="AddOperator(this.value)">X</button>
+		<!--Row-->
+		<button class="Keypad_Numbers" type="button" value="4" accesskey="4" onclick="AddNumber(this.value)">4</button>
+		<button class="Keypad_Numbers" type="button" value="5" accesskey="5" onclick="AddNumber(this.value)">5</button>
+		<button class="Keypad_Numbers" type="button" value="6" accesskey="6" onclick="AddNumber(this.value)">6</button>
+		<button class="Keypad_Operators" type="button" value="sub" accesskey="-" onclick="AddOperator(this.value)">-</button>
+		<!--Row-->
+		<button class="Keypad_Numbers" type="button" value="1" accesskey="1" onclick="AddNumber(this.value)">1</button>
+		<button class="Keypad_Numbers" type="button" value="2" accesskey="2" onclick="AddNumber(this.value)">2</button>
+		<button class="Keypad_Numbers" type="button" value="3" accesskey="3" onclick="AddNumber(this.value)">3</button>
+		<button class="Keypad_Operators" type="button" value="sum" accesskey="+" onclick="AddOperator(this.value)">+</button>
+		<!--Row-->
+		<button class="Keypad_Numbers" type="button" onclick="InvertNumber()">+/-</button>
+		<button class="Keypad_Numbers" type="button" value="0" accesskey="0" onclick="AddNumber(this.value)">0</button>
+		<button class="Keypad_Numbers" type="button" value="." onclick="AddNumber(this.value)">,</button>
+		<button class="Keypad_Result" type="button" accesskey="=" onclick="RequestAPI(true)">=</button>
+	</div><!--/Content-->
+</div><!--/Container-->
+
+</body>
+</html>
